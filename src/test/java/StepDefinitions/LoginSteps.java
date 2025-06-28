@@ -20,9 +20,4 @@ public class LoginSteps {
     public void clickLoginButton() {
         System.out.println("and block 3");
     }
-
-    @Then("user is navigated to the homepage")
-    public void userIsNavigatedToTheHomepage() {
-        System.out.println("then block 4");
-    }
 }
