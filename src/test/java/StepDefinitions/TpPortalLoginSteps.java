@@ -29,11 +29,11 @@ public class TpPortalLoginSteps {
         Thread.sleep(5000);
     }
 
-    @When("user enters valid username and password")
-    public void user_enters_valid_username_and_password() throws InterruptedException {
+    @When("^user enters valid (.*) and (.*)$")
+    public void user_enters_valid_username_and_password(String username, String password) throws InterruptedException {
         System.out.println("user enters username and password");
-        driver.findElement(By.cssSelector("input[placeholder='Enter username']")).sendKeys("shihab");
-        driver.findElement(By.cssSelector("input[placeholder='Enter password']")).sendKeys("Shihab@007!");
+        driver.findElement(By.cssSelector("input[placeholder='Enter username']")).sendKeys(username);
+        driver.findElement(By.cssSelector("input[placeholder='Enter password']")).sendKeys(password);
         Thread.sleep(2000);
     }
 
